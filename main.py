@@ -10,7 +10,12 @@ https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/tree/master
 
 # import CPX library
 from adafruit_circuitplayground import cp
+import time
 
 # Main loop
 while True:
+    cp.pixels[3] = (255,50,20)
+    time.sleep(0.5)
+    cp.pixels[3] = (40,255,80)
+    time.sleep(0.5)
     pass
