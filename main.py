@@ -11,6 +11,6 @@ https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground/tree/master
 # import CPX library
 from adafruit_circuitplayground import cp
 
+# Main loop
 while True:
-    # start your code here
     pass
