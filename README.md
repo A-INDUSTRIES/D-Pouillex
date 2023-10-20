@@ -7,6 +7,7 @@
 pip install adafruit_circuitplayground
 ```
 [See documentation on how to get started](https://learn.adafruit.com/welcome-to-circuitpython)
+
 [See documentation of the package](https://learn.adafruit.com/circuitpython-made-easy-on-circuit-playground-express/first-things-first)
 #### However, if you do not have an adafruit crickit for circuit playground express, you may use this extension (deprecated) for vscode.
 [Vscode Python DeviceSimulator](https://github.com/microsoft/vscode-python-devicesimulator)
