@@ -1,12 +1,12 @@
 from adafruit_crickit import crickit
 from adafruit_circuitplayground import cp
 import adafruit_tcs34725
-import board
+from board import I2C
 from time import sleep
 
 class Bot():
     def __init__(self):
-        i2c = board.I2C()
+        i2c = I2C()
         self.sensor = adafruit_tcs34725.TCS34725(i2c)
         self.sensor.integration_time = 2.4
         self.sensor.gain = 60
@@ -24,7 +24,7 @@ class Bot():
     def change_led(self, i_list: list, color: list):
         rgb = tuple(color[0:-1])
         for i in i_list:
-            crickit.onboard_pixel[i] = rgb
+            cp.pixels[i] = rgb
     
     def rotate_servo(self, deg):
         serv = crickit.servo_1
