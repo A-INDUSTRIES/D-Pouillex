@@ -1,6 +1,3 @@
-import gc
-gc.collect()
-
 from adafruit_crickit import crickit
 from adafruit_circuitplayground import cp
 import adafruit_tcs34725
