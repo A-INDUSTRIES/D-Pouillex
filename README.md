@@ -2,8 +2,8 @@
 ***
 ## *This repository contains the code for our first engineering year project @D-Pouillex.*
 ### This code is intended to be ran on a ``Adafruit CRICKIT for Circuit Playground Express``.
-### Packages needed and therefore needed to be installed are :
-```bash
+### Packages needed to be installed are :
+```
 Adafruit_Crickit
 seesaw_servo
 seesaw_motor
