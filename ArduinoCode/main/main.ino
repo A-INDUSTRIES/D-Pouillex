@@ -76,14 +76,8 @@ struct Colors colors(uint16_t r, uint16_t g, uint16_t b, uint16_t c) {
 };
 
 void setup() {
-  delay(1000);
-  Serial.begin(115200);
-
   if (!crickit.begin()) {
-    Serial.println("Error");
     while (1) delay(1);
-  } else {
-    Serial.println("Started!");
   }
 
   for (int i = 0; i < NUM_SERVOS; i++) {
@@ -102,6 +96,7 @@ void setup() {
 
   display.begin(SSD1306_SWITCHCAPVCC, 0X3C);
 
+  // Delay of two seconds to let the display initialize.
   delay(2000);
   showReady();
 }
@@ -144,6 +139,7 @@ void run() {
 }
 
 void count() {
+  // For a limited amount of time, waits and see if a vote passes in front of a sensor, if so count it.
   for (int i = 0; i < 500; i++) {
     if (readIr(0) > IR_SENSITIVITY) {
       bigWhiteCount += 1;
@@ -223,12 +219,6 @@ struct Colors getColor() {
   uint16_t b_comp = b - ir;
   struct Colors color;
   color = colors(r_comp, g_comp, b_comp, c);
-  Serial.println("red");
-  Serial.println(r);
-  Serial.println("green");
-  Serial.println(r);
-  Serial.println("blue");
-  Serial.println(r);
   return color;
 }
 
@@ -282,6 +272,7 @@ void showReady() {
 }
 
 void showResults() {
+  // Makes the result text scroll vertically in both directions.
   for (int i = -75; i < 65; i++) {
     drawText(i);
   }
