@@ -102,10 +102,6 @@ void setup() {
 }
 
 void loop() {
-  run();
-}
-
-void run() {
   if (pass == 1000 && (smallBlackCount + bigBlackCount + smallWhiteCount + bigWhiteCount) != 0) {
     while (true) {
       showResults();
