@@ -107,7 +107,7 @@ void loop() {
       showResults();
     }
   }
-  if (!(smallBlackCount + bigBlackCount + smallWhiteCount + bigWhiteCount) == 0) {
+  if ((smallBlackCount + bigBlackCount + smallWhiteCount + bigWhiteCount) != 0) {
     pass += 1;
   }
   if (distance() < 3 || queued > 0) {
