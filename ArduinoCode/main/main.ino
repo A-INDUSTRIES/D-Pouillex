@@ -108,7 +108,7 @@ void loop() {
     }
   }
   if (!(smallBlackCount + bigBlackCount + smallWhiteCount + bigWhiteCount) == 0) {
-    pass += 0;
+    pass += 1;
   }
   if (distance() < 3 || queued > 0) {
     showWorking();
